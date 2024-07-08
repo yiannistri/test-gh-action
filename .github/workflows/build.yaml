@@ -71,6 +71,6 @@ jobs:
               repo: 'test-gh-action',
               title: '[${{ github.event.inputs.charts_ref }}] rancher-${{ env.OPERATOR }} ${{ github.event.inputs.new_chart_version }}+up${{ github.event.inputs.new_operator_version }} update',
               head: 'yiannistr/test-gh-action:${{ env.OPERATOR }}-${{ env.VERSION }}-${{ env.TIMESTAMP }}',
-              base: '${{ github.event.inputs.charts_ref }}',
+              base: 'main',
               body: 'Update ${{ env.OPERATOR }} to v${{github.event.inputs.new_operator_version}}\n\nChangelog: https://github.com/rancher/${{ env.OPERATOR }}/releases/tag/v${{github.event.inputs.new_operator_version}}\n\n'
             })
