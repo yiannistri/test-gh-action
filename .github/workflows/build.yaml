@@ -33,5 +33,5 @@ jobs:
       - name: Create PR
         env:
           GH_TOKEN: ${{secrets.BOT_TOKEN}}
-          run: |
-            gh pr create --base main --head yiannistr:${{ env.OPERATOR }}-$VERSION-$TIMESTAMP --title "Pull request title" --body "Pull request body"
+        run: |
+          gh pr create --base main --head yiannistr:${{ env.OPERATOR }}-$VERSION-$TIMESTAMP --title "Pull request title" --body "Pull request body"
